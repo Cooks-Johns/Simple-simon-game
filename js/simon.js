@@ -53,7 +53,7 @@ function playGame(color) {
     }, 300);
 }
 
-var i = 0;
+//
 
 function check() {
     if (game.currentGame[i] === game.user[i]) {
@@ -67,7 +67,7 @@ function check() {
         i++;
 
     } else {
-        alert("Game Over");
+        alert("Thank You Come Again");
         i = 0;
         newGame();
     }
