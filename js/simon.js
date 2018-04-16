@@ -17,7 +17,7 @@ function newGame() {
 }
 
 function reset() {
-    game.player = []
+    game.user = []
 }
 
 function start() {
@@ -56,8 +56,8 @@ function playGame(color) {
 var i = 0;
 
 function check() {
-    if (game.currentGame[i] === game.player[i]) {
-        if (game.player.length === game.currentGame.length) {
+    if (game.currentGame[i] === game.user[i]) {
+        if (game.user.length === game.currentGame.length) {
             count();
             $(".score").text(game.count + 1);
             nextRound();
@@ -87,7 +87,7 @@ $("#green").click(function() {
     setTimeout(function () {
         $("#green").removeClass("light");
     }, 300);
-    game.player.push("#" + this.id);
+    game.user.push("#" + this.id);
     check();
 });
 
@@ -96,7 +96,7 @@ $("#red").click(function() {
     setTimeout(function () {
         $("#red").removeClass("light");
     }, 300);
-    game.player.push("#" + this.id);
+    game.user.push("#" + this.id);
     check();
 });
 
@@ -105,7 +105,7 @@ $("#blue").click(function() {
     setTimeout(function () {
         $("#blue").removeClass("light");
     }, 300);
-    game.player.push("#" + this.id);
+    game.user.push("#" + this.id);
     check();
 });
 
@@ -114,6 +114,6 @@ $("#yellow").click(function() {
     setTimeout(function () {
         $("#yellow").removeClass("light");
     }, 300);
-    game.player.push("#" + this.id);
+    game.user.push("#" + this.id);
     check();
 });
