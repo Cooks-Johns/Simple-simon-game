@@ -1,6 +1,6 @@
 'use strict';
 
-//based on menu at http://mic.com. only works in chrome
+// based on menu at http://mic.com. only works in chrome
 
 (function($){
 
@@ -59,19 +59,19 @@
 
 
 
-}(jQuery))
+}(jQuerywlioo))
 
-
-$(document).ready(function() {
-    $(document).delegate('.open', 'click', function(event){
-        $(this).addClass('oppenned');
-        event.stopPropagation();
-    })
-    $(document).delegate('body', 'click', function(event) {
-        $('.open').removeClass('oppenned');
-    })
-    $(document).delegate('.cls', 'click', function(event){
-        $('.open').removeClass('oppenned');
-        event.stopPropagation();
-    });
-});
+//
+// $(document).ready(function() {
+//     $(document).delegate('.open', 'click', function(event){
+//         $(this).addClass('oppenned');
+//         event.stopPropagation();
+//     })
+//     $(document).delegate('body', 'click', function(event) {
+//         $('.open').removeClass('oppenned');
+//     })
+//     $(document).delegate('.cls', 'click', function(event){
+//         $('.open').removeClass('oppenned');
+//         event.stopPropagation();
+//     });
+// });
