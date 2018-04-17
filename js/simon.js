@@ -3,7 +3,7 @@
 var game = {
     count: 1,
     possibilities: ['#green','#blue', '#red', '#yellow'],
-    currentGame: [],
+    yourGame: [],
     user: []
 };
 
@@ -21,27 +21,27 @@ function reset() {
 }
 
 function start() {
-    game.currentGame = [];
+    game.yourGame = [];
     game.player = [];
     game.count = 0;
     generateMove();
 }
 
 function generateMove(){
-    game.currentGame.push(game.possibilities[(Math.floor(Math.random()*4))]);
+    game.yourGame.push(game.possibilities[(Math.floor(Math.random()*4))]);
     showMoves();
-    console.log(game.currentGame);
+    console.log(game.yourGame);
 }
 
 function showMoves() {
     var i = 0;
     var moves = setInterval(function(){
-        playGame(game.currentGame[i]);
+        playGame(game.yourGame[i]);
         i++;
-        if (i >= game.currentGame.length) {
+        if (i >= game.yourGame.length) {
             clearInterval(moves);
         }
-    }, 600);
+    }, 800);
 
     reset();
 }
@@ -50,14 +50,14 @@ function playGame(color) {
     $(color).addClass('light');
     setTimeout(function(){
         $(color).removeClass('light');
-    }, 300);
+    }, 400);
 }
 
 //
 
 function check() {
-    if (game.currentGame[i] === game.user[i]) {
-        if (game.user.length === game.currentGame.length) {
+    if (game.yourGame[i] === game.user[i]) {
+        if (game.user.length === game.yourGame.length) {
             count();
             $(".score").text(game.count + 1);
             nextRound();
