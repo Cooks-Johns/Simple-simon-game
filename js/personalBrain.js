@@ -28,21 +28,7 @@
     }
 
 
-//     for $i from 1 through 4 {
-//     .show figure:nth-child(#{$i}) {
-//             transition-delay: $i * .12s;
-//         }
-//     }
-//
-// .category.show {
-//         opacity: 1;
-//         figure {
-//             opacity: 1;
-//             left: 0;
-//             transition-duration: .2s;
-
-
-            // $('most-viewed').onmouseenter() {
+    // $('most-viewed').onmouseenter() {
     //
     // }
 
@@ -71,4 +57,21 @@
     //go go go!
     var menu = new Menu().init();
 
+
+
 }(jQuery))
+
+
+$(document).ready(function() {
+    $(document).delegate('.open', 'click', function(event){
+        $(this).addClass('oppenned');
+        event.stopPropagation();
+    })
+    $(document).delegate('body', 'click', function(event) {
+        $('.open').removeClass('oppenned');
+    })
+    $(document).delegate('.cls', 'click', function(event){
+        $('.open').removeClass('oppenned');
+        event.stopPropagation();
+    });
+});
