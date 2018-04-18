@@ -1,5 +1,7 @@
 
-
+*, body, #page-top, #newsViews > figure:nth-child(3) > figcaption{
+    background-color: #222222;
+}
 *,
 *::before,
 *::after {
@@ -267,6 +269,13 @@ figure {
     }
     li {
         text-align: center;
+    }
+}
+
+@media (min-width: 516px) {
+    ul {
+        width: 100%;
+        padding: 0;
     }
 }
 
