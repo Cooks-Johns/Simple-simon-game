@@ -59,7 +59,7 @@
 
 
 
-}(jQuerywlioo))
+}(jQuery))
 
 //
 // $(document).ready(function() {
