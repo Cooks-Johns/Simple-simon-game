@@ -9,6 +9,11 @@
     /*background-color: black;*/
 }
 
+#mainImg {
+    width: 100%;
+    border: crimson 19px solid;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -180,6 +185,7 @@ li:nth-child(6):hover:before {
     position: absolute;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2NkQAKMIPbmWb7/fdM2M4I5MAAASNkEBEaKR7gAAAAASUVORK5CYII=);
     -webkit-background-clip: text;
+    background-color: white;
     -webkit-text-fill-color: transparent;
     z-index: -1;
 }
@@ -464,7 +470,7 @@ figure {
      /*z-index: 2;*/
      /*text-align: center;*/
      /*padding: 20px 40px;*/
-     /*transform: translateY(200px);*/
+     /*!*transform: translateY(200px);*!*/
  /*}*/
 /*.button:hover {*/
     /*text-decoration: none;*/
