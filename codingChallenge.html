@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Challenge</title>
+</head>
+<body>
+
+<script>
+    'use strict';
+
+
+    //--------==================         Q1
+
+
+    function alphabeticalOrder (string){
+        string = string.toString();
+        console.log(string.toLowerCase().split("").sort().join(""));
+
+    }
+    alphabeticalOrder ("webmaster");
+
+
+
+
+    //-----=====================        Q2
+
+
+    function vowel_count(str1)
+    {
+        var vowel_list = 'aeiouAEIOU';
+        var vcount = 0;
+
+        for(var x = 0; x < str1.length ; x++)
+        {
+            if (vowel_list.indexOf(str1[x]) !== -1)
+            {
+                vcount += 1;
+            }
+
+        }
+        return vcount;
+    }
+    console.log(vowel_count("I will hace three shots of Fireball, please."));
+
+
+
+
+
+
+
+
+
+    //---------===================      Q3
+
+
+    function unique_char(str1)
+    {
+        var str=str1;
+        var uniql="";
+        for (var x=0;x < str.length;x++)
+        {
+
+            if(uniql.indexOf(str.charAt(x))==-1)
+            {
+                uniql += str[x];
+
+            }
+        }
+        return uniql;
+    }
+    console.log(unique_char("thequickbrownfoxjumpsoverthelazydog"));
+
+
+
+
+
+
+
+    //-----=====================        Q4
+
+
+    function toCelsius(f) {
+        return (5/9) * (f-32);
+    }
+
+
+
+    function toKelvin(f) {
+        return ((5/9) * (f-32)) +  273.15;
+    }
+
+
+
+
+
+
+    //-----=====================        Q5
+
+    function toCamelCase(str){
+
+        return (str||'').toLowerCase().replace(/(\b|-)\w/g, function(m) {
+            return m.toUpperCase().replace(/-/,'');
+
+
+        });
+    }
+
+    function toCamelCase(str) {
+        if (/_/.test(str)) {
+            var finalStr = str.replace(/_[a-z]/,function(p1){
+                    return p1.toLowerCase();
+                })
+                    .replace(/_/,'');
+            return finalStr;
+        } else {
+            var result = str.toLowerCase()
+                    .replace(/\s\S/g, function(p1) {
+                        return p1.toUpperCase();
+                    })
+                    .replace(/\s/g,'');
+            return result;
+        }
+    }
+
+    console.log(toCamelCase("camel_case"));
+    console.log(toCamelCase("This is a string"));
+
+
+    function kebabCase(string) {
+        var result = string;
+
+        // Convert camelCase capitals to kebab-case.
+        result = result.replace(/([a-z][A-Z])/g, function(match) {
+            return match.substr(0, 1) + '-' + match.substr(1, 1).toLowerCase();
+        });
+
+        // Convert non-camelCase capitals to lowercase.
+        result = result.toLowerCase();
+
+        // Convert non-alphanumeric characters to hyphens
+        result = result.replace(/[^-a-z0-9]+/g, '-');
+
+        // Remove hyphens from both ends
+        result = result.replace(/^-+/, '').replace(/-$/, '');
+
+        return result;
+    }
+
+    console.log(kebabCase("code_snake"));
+
+
+</script>
+
+</body>
+</html>
