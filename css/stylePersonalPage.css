@@ -1,6 +1,31 @@
 
-*, body, #page-top, #newsViews > figure:nth-child(3) > figcaption{
+*, body, #page-top{
     background-color: #222222;
+}
+
+#worldViews figcaption {
+    background-color:red;
+}
+#policyViews figcaption {
+     background-color: mediumturquoise;
+ }
+#artViews figcaption {
+      background-color: lightpink;
+  }
+#sportsViews figcaption {
+       background-color: blue;
+   }
+#musicViews figcaption {
+        background-color: purple;
+    }
+
+#newsViews figcaption {
+    background-color: burlywood;
+}
+
+#identityViews figcaption {
+    background-color: lightgreen;
+
 }
 *,
 *::before,
@@ -16,6 +41,8 @@
     /*padding: 10px;*/
     border-radius: 133px;
 }
+
+
 
 html {
     box-sizing: border-box;
