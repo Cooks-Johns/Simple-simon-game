@@ -114,11 +114,11 @@
             this.steering = new Vector();
             this.target = new Vector(tx, ty);
 
-            this.size = 15;
+            this.size = 10;
 
-            this.maxVelocity = 1000;
-            this.maxSteer = 10.50;
-            this.maxSpeed = 50.0;
+            this.maxVelocity = 1;
+            this.maxSteer = 11.50;
+            this.maxSpeed = 21.0;
         }
 
 
@@ -164,7 +164,7 @@
 
     //-----============    startiing position
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 100; i++) {
         creatures.push(
             new Creature(
                 Math.random() * canvas.width,
